@@ -1,0 +1,57 @@
+
+.header {
+    background-color: var(--primary);
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    color: var(--white);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header a:hover {
+    opacity: 0.7;
+}
+
+.header .logo a {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.header .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.header .nav-links li:last-child {
+    margin-right: 0;
+}
+
+/* Responsive styles for the header */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+    
+    .header .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        margin-top: 10px;
+    }
+
+    .header .nav-links li {
+        margin: 5px 0; /* Reduced margin for nav items */
+    }
+}

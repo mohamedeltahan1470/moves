@@ -1,0 +1,69 @@
+
+.movie-card {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    border: 0;
+    display: block;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover .overlay {
+    border: 3px solid var(--secondary);
+}
+
+.inner-card-controls {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 3px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover .inner-card-controls {
+    opacity: 1; /* Corrected class selector */
+}
+
+.ctr1-btn {
+    color: #fefefe;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    padding: 5px;
+    margin: 0;
+}
+
+/* Responsive button size */
+@media (max-width: 576px) {
+    .ctr1-btn {
+        font-size: 1rem; /* Smaller button text on mobile */
+    }
+}
+
+.ctr1-btn:hover {
+    color: var(--secondary);
+    cursor: pointer;
+}

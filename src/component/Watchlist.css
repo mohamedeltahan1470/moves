@@ -1,0 +1,79 @@
+.watch-list {
+    padding: 30px 0;
+}
+
+.watch-list .main-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.movies-count {
+    display: block;
+    background-color: var(--secondary);
+    padding: 5px 15px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 999px;
+    color: var(--primary);
+}
+
+.watch-list h1 {
+    color: var(--primary);
+    margin: 0;
+}
+
+/* Movie grid with responsive layout */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+/* Responsive movie grid for larger screens */
+@media (min-width: 992px) {
+    .movie-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Responsive movie grid for medium screens */
+@media (max-width: 992px) and (min-width: 576px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+/* Responsive movie grid for small screens */
+@media (max-width: 576px) {
+    .movie-grid {
+        grid-template-columns: 1fr; /* One column for small screens */
+        grid-gap: 20px; /* Reduced gap on small screens */
+    }
+
+    .watch-list .main-heading {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: flex-start; /* Align to the start */
+        margin-bottom: 15px; /* Space below the heading */
+    }
+
+    .watch-list h1 {
+        font-size: 1.5rem; /* Smaller heading size */
+    }
+
+    .movies-count {
+        font-size: 1rem; /* Smaller font size for the movie count */
+        padding: 5px 10px; /* Adjust padding */
+    }
+
+    .watch-list .no-movies {
+        font-size: 2rem; /* Smaller size for no movies message on mobile */
+    }
+}
+
+.watch-list .no-movies {
+    color: #c4c4c4;
+    font-size: 3rem;
+    text-align: center;
+}

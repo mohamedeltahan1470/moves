@@ -1,0 +1,81 @@
+.result-card {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.result-card .poster-wrapper img,
+.result-card .filter-poster {
+    width: 75px;
+    height: 113px;
+    background-color: #dbdada;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: block;
+    color: transparent;
+}
+
+.result-card .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Allow info section to grow */
+}
+
+.result-card .info .title {
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin: 0;
+}
+
+.result-card .info .release-date {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--primary);
+    margin: 0;
+}
+
+.result-card .controls {
+    display: flex; /* Ensure controls are in a row */
+    gap: 10px; /* Add gap between buttons */
+}
+
+.result-card .controls button {
+    flex-grow: 1; /* Make buttons grow to fill space equally */
+}
+
+/* Responsive styles for ResultCard */
+@media (max-width: 768px) {
+    .result-card {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text */
+    }
+
+    .result-card .poster-wrapper {
+        margin-bottom: 10px; /* Space between poster and info */
+    }
+
+    .result-card .controls {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Smaller gap for buttons */
+        width: 100%; /* Ensure buttons take full width */
+    }
+
+    .result-card .controls button {
+        width: 100%; /* Full-width buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    .result-card .info .title,
+    .result-card .info .release-date {
+        font-size: 1rem; /* Smaller font size on mobile */
+    }
+
+    .result-card .poster-wrapper img {
+        width: 50px; /* Smaller poster image on mobile */
+        height: 75px; /* Adjusted height */
+    }
+}

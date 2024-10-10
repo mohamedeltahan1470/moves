@@ -1,0 +1,57 @@
+
+ .watched {
+    padding: 30px 0;
+}
+
+.watched .main-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.movies-count {
+    display: block;
+    background-color: var(--secondary);
+    padding: 5px 15px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 999px;
+    color: var(--primary);
+}
+
+.watched h1 {
+    color: var(--primary);
+    margin: 0;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+/* Responsive movie grid */
+@media (min-width: 992px) {
+    .movie-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.watched .no-movies {
+    color: #c4c4c4;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Responsive heading font size */
+@media (max-width: 576px) {
+    .watched .main-heading {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: flex-start; /* Align to the start */
+    }
+
+    .watched h1 {
+        font-size: 1.5rem; /* Smaller heading size */
+    }
+}
